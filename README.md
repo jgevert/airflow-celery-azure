@@ -6,7 +6,7 @@ The executor for this project is Celery. At the current state of this project AZ
 The image is build this way that environment variables controll the start behaviour. That means if a user decides to start a scheduler this will be controlled via STARTUP:
 
 `
-docker run -d --rm --name airflow-scheduler -e STARTUP=scheduler jgevert/airflow-celery-azure:latest
+docker run -d --rm --name airflow-scheduler -e STARTUP=scheduler jangevert/airflow-celery-azure:latest
 `
 
 The following STARTUP variables are possible:
@@ -25,6 +25,8 @@ Beside the STARTUP variable there are other necessary variables to make the clus
 - FLOWER_PASSWORD=YOUR PASSWORD FOR FLOWER WEBSERVICE
 - GIT_URL=YOUR URL TO GIT REPO WHERE DAGS AND PLUGINS ARE LOCATED
 - GIT_PASSWORD=YOUR PASSWORD TO ACCESS THE GIT REPO
+
+It's advised to use a env file: `docker run -d --rm -e STARTUP=scheduler --env-file credentials.env --name jangevert/airflow-celery:latest`
 
 ### Git Repo
 Due to the fact Docker containers are stateless and each worker node has to have a copy of all DAGs inside its own dags folder the Git Repo is important.
