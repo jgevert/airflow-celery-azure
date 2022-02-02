@@ -30,3 +30,12 @@ Beside the STARTUP variable there are other necessary variables to make the clus
 Due to the fact Docker containers are stateless and each worker node has to have a copy of all DAGs inside its own dags folder the Git Repo is important.
 Via the Git repo each container downloads an entire copy of the DAGs permanently. I could have mounted one place of storage into every worker node but the 
 maintenance would have become too complicated. That's why each worker container as well as the webserver download permanently the git repo.
+
+### How to create a Fernet key?
+For creating a Fernet key you need only a few lines of Python code:
+`
+from cryptography.fernet import Fernet
+
+fernet_key = Fernet.generate_key()
+print(fernet_key.decode())  # your fernet_key, keep it in secured place!
+`
