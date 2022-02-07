@@ -32,3 +32,10 @@ You need the token on your screen to connect your worker nodes with the manager 
 After the installation you can access portainer.io via: http://YOU_IP:9443
 
 For additional information regarding the setup of portainer please visit: https://docs.portainer.io/v/ce-2.9/start/install/server/setup
+
+### Management of Docker Swarm Token
+Of cause you don't have to remember the join token of Docker Swarm. Just type:
+```
+docker swarm join-token worker # for worker nodes or
+docker swarm join-token manager # for additional manager
+```
