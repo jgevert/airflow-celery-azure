@@ -56,3 +56,7 @@ docker run -d -rm -name rabbitmq \
     rabbitmq:3.9-management
 ```
 This RabbitMQ interface can be accessed via port 15672.
+
+### Postgres Database
+We advise to set up a Postgres Cloud database in AZURE. Since Docker containers are stateless you will have all of your configurations stored in a secure place. Please set up a Postgres DB-Service in AZURE and create a database with the name `airflow`.
+The existance of `airflow` is important to make the whole system work.
