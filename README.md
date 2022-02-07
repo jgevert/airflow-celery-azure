@@ -39,3 +39,20 @@ Of cause you don't have to remember the join token of Docker Swarm. Just type:
 docker swarm join-token worker # for worker nodes or
 docker swarm join-token manager # for additional manager
 ```
+
+## Airflow Services
+### RabbitMQ
+When everything is set up you can launch your first service: RabbitMQ
+RabbitMQ is an in-memory-database that will be your queue for the scheduler/worker. That also means that RabbitMQ will connect your worker nodes with the scheduler/webserver!
+You can start RabbitMQ from portainer.io on a worker node. BUT: you have to keep in mind the IP of that VM since this information has to be stored in airflow.cfg!
+For a short overview of the ports and the Docker Build I'll put the shell command here:
+
+```
+docker run -d -rm -name rabbitmq \
+    -e RABBITMQ_DEFAULT_USER=username \
+    -e RABBITMQ_DEFAULT_PASS=password \
+    -p 5672_5672 \
+    -p 15672:15672 \
+    rabbitmq:3.9-management
+```
+This RabbitMQ interface can be accessed via port 15672.
