@@ -12,5 +12,3 @@ make the folders necessary:
 ```
 bash install.sh init GIT=https://github.com/jgevert/airflow-celery-azure
 ```
-
-During the installation Docker Swarm will mit initialized: `docker swarm init`
