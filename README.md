@@ -23,6 +23,8 @@ For you RabbitMQ service you don't need to init install.sh
 
 ## Install poertainer.io on manager node
 Since this porject will install Apache Airflow on a Docker Swarm cluster we have choosen to install portainer.io
-on the manager nodes. Before starting `bash /home/airflow/airflow-celery-azure/install_portainer.sh` you
-have to make sure Docker Swarm hat been started: `docker swarm init`
+on the manager nodes. Before starting `bash /home/airflow/airflow-celery-azure/install_portainer.sh` 
+you have to make sure Docker Swarm hat been started: 
+`docker swarm init`
+
 You need the token on your screen to connect your worker nodes with the manager node.
