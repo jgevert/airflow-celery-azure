@@ -1,5 +1,5 @@
 # airflow-celery-azure
-This project will help you to initiate and install Apache Airflow with Celery Executor.
+This project will help you to initiate and install Apache Airflow with Celery Executor for a Docker Swarm cluster.
 First of all you have to start the install script provided in the root directory of this project with two parameters:
 
 - init or remove
@@ -12,3 +12,5 @@ make the folders necessary:
 ```
 bash install.sh init GIT=https://github.com/jgevert/airflow-celery-azure
 ```
+
+During the installation Docker Swarm will mit initialized: `docker swarm init`
