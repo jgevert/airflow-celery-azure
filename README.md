@@ -73,9 +73,9 @@ into airflow.cfg! Otherwise your system is not connected to a central database.
 The `airflow.cfg` file is essential for Apache Airflow. Please modify the relevant information in `airflow-celery-azure/config/airflow.cfg` and save the file. Please don't moce the file since there is a binding from the Docker file to the local airflow.cfg.
 #### Which information must be changed?
 ```
-32: sql_alchemy_conn =
-125: fernet_key = 
-739: broker_url = 
-748: result_backend = 
-765: flower_basic_auth = 
+32: sql_alchemy_conn = Postgres Database
+125: fernet_key = plase look up how to generate a fernet key in python
+739: broker_url = connection to RabbitMQ
+748: result_backend = Postgres Database
+765: flower_basic_auth = username:password for flower (please choose here)
 ```
