@@ -28,3 +28,5 @@ you have to make sure Docker Swarm hat been started:
 `docker swarm init`
 
 You need the token on your screen to connect your worker nodes with the manager node.
+
+After the installation you can access portainer.io via: http://YOU_IP:9443
